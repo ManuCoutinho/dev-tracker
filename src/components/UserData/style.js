@@ -29,5 +29,9 @@ export const CardMedia = styled.section `
  font-size: 1rem;    
  align-items: center;
  justify-content: space-around;
- padding: 1rem;
+ padding: 1rem 0;
+ gap: 1rem;
+    a {
+      margin-left: 0.5rem;
+    }
 `

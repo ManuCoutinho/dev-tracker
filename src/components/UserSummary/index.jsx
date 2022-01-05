@@ -1,32 +1,46 @@
 import { UserData } from "../UserData";
+import { useContext } from "react";
+import { UserContext } from "../../UserContext";
 import { Container, ContentSummary, Title } from "./style";
-export function UserSummary(){
-  return(      
-    <>          
+
+export function UserSummary() {
+  const data = useContext(UserContext);  
+  return (
+    <>
       <Container>
         <div>
-              <img src="https://source.unsplash.com/random/100x100" alt="avatar do usuário">
-              </img>
-        </div>        
-          <ContentSummary>
-            <Title>
+          {data.map(userData => 
+            <img
+              key={userData.avatar_url}
+              src={userData.avatar_url}
+              alt={`avatar do ${userData.name}`}
+            ></img>
+        )}
+        </div>
+        <ContentSummary>
+          <Title>
+            {data.map(userData => 
               <div>
-                <h2>Nome do Usuário </h2> 
-                <span>@user</span> 
+                <h2 key={userData.name}>{userData.name}</h2>
+                <span key={userData.login}>{userData.login}</span>
               </div>
-              <div>
-                  <p>Joined 25 Jan 2021</p>
-              </div>
-            </Title>
-              
+           )}
             <div>
-                <p>
-                    Bio: Lorem ipsum dolor sit amet consectetur, adipisicing elit.              
-                </p> 
-            </div>          
-          </ContentSummary>
-          <UserData/>    
+              {data.map(userData => 
+                <p key={userData.created_at}>
+                  {userData.created_at}</p>
+                
+             )}
+            </div>
+          </Title>
+          <div>
+            {data.map(userData => 
+              <p key={userData.bio}>{userData.bio}</p>
+            )}
+          </div>
+        </ContentSummary>
+        <UserData />
       </Container>
     </>
-  )
-};
+  );
+}

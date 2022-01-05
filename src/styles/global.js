@@ -7,6 +7,7 @@ export const GlobalStyle = createGlobalStyle `
   --blue-el: #0078ff;
   --text: #FBFFFF;
   --border: rgba(255, 255, 255, 0.7);
+  --hover: #0078f1;
 }
 
 * {
@@ -37,5 +38,18 @@ body, input, textarea, button {
 
 h1, h2, h3, h4, h5, h6, strong {
   font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: filter 0.2s;   
+}
+
+a:hover {
+  filter: brightness(0.8);
+  color: var(--hover);
+  transition: 0.2s;  
 }
 `

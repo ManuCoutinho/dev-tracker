@@ -12,14 +12,16 @@ export const Container = styled.section `
      img {
       border-radius: 100%;
       border: 2px solid var(--border);
-      margin: 0 2rem;   
+      margin: 0 auto;
+      width: 100%;   
     }     
 `
 
 export const ContentSummary = styled.div `
   grid-column: 2 / -1;
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
+  margin-left: 1rem; 
   
     p {
       font-size: 1.1rem;
