@@ -18,7 +18,7 @@ export function ContainerWrapper() {
     e.preventDefault();
     await fetch(`https://api.github.com/users/${user}`)
       .then((response) => response.json())
-      .then((data) => setData(data));      
+      .then((data) => setData(data));     
   }
 
   return (
