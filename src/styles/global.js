@@ -1,11 +1,12 @@
 import { createGlobalStyle } from "styled-components";
+import 'react-toastify/dist/ReactToastify.css';
 
 export const GlobalStyle = createGlobalStyle `
-  :root {
-  --bg-primary: #141C2F;
-  --bg-card: #1F2A48;
-  --blue-el: #0078ff;
-  --text: #FBFFFF;
+  :root {  
+  --bg-primary: #121214;
+  --bg-card:#29292E;
+  --blue-el: #1F2729;
+  --text: #F1F2F3;
   --border: rgba(255, 255, 255, 0.7);
   --hover: #0078f1;
 }

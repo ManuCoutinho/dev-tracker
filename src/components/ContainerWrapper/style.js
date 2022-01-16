@@ -45,10 +45,10 @@ export const Input = styled.input`
   background: var(--bg-card);
   color: var(--text);
   border: transparent;
-  font-size: 1rem;
+  font-size: 1em;
   padding: 1rem;
   outline: 0;
-  width: 31.5rem;
+  width: 100%;
 `
 
 export const Button = styled.button`

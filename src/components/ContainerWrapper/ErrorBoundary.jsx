@@ -12,7 +12,7 @@ export class ErrorBoundary extends React.Component {
   static getDerivedStateFromError(error) {    
     return { 
       hasError: true,
-      errorMessage: error.message
+      errorMessage: "Algo deu errado!"
     };
   }
   componentDidCatch(error, errorInfo) {
