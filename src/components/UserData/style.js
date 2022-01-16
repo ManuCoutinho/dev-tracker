@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const CardWrapper = styled.section `
-  background:var(--bg-primary);
+  background:var(--gray-900);
   grid-column: 2 / -1;
   display: flex;
   justify-content: space-evenly;
@@ -31,7 +31,12 @@ export const CardMedia = styled.section `
  justify-content: space-around;
  padding: 1rem 0;
  gap: 1rem;
+ transition: all 0.2s;
     a {
       margin-left: 0.5rem;
+        &:hover {
+          color: var(--cyan);
+          transition: all 0.2s;
+        }
     }
 `

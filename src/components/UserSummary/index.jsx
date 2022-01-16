@@ -1,19 +1,21 @@
-import { UserData } from "../UserData";
 import { useContext } from "react";
+import { UserData } from "../UserData";
 import { UserContext } from "../../UserContext";
+
 import { Container, ContentSummary, Title } from "./style";
 
 export function UserSummary() {
   const data = useContext(UserContext);  
+
   return (
-    <>
       <Container>
         <div>
           {data.map(userData => 
             <img
-              key={userData.avatar_url}
+              key={(Math.random()*100)}
               src={userData.avatar_url}
               alt={`avatar do ${userData.name}`}
+              width="150"
             ></img>
         )}
         </div>
@@ -21,26 +23,25 @@ export function UserSummary() {
           <Title>
             {data.map(userData => 
               <div>
-                <h2 key={userData.name}>{userData.name}</h2>
-                <span key={userData.login}>{userData.login}</span>
+                <h2 key={(Math.random()*100)}>{userData.name}</h2>
+                <span key={(Math.random()*100)}>{userData.login}</span>
               </div>
            )}
             <div>
               {data.map(userData => 
-                <p key={userData.created_at}>
-                  {userData.created_at}</p>
-                
-             )}
+            <p key={(Math.random()*100)}>
+              {userData.created_at}
+              </p>
+            )}
             </div>
           </Title>
           <div>
             {data.map(userData => 
-              <p key={userData.bio}>{userData.bio}</p>
+              <p key={(Math.random()*100)}>{userData.bio}</p>
             )}
           </div>
         </ContentSummary>
         <UserData />
       </Container>
-    </>
   );
 }

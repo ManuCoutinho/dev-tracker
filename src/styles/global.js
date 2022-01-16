@@ -3,12 +3,11 @@ import 'react-toastify/dist/ReactToastify.css';
 
 export const GlobalStyle = createGlobalStyle `
   :root {  
-  --bg-primary: #121214;
-  --bg-card:#29292E;
-  --blue-el: #1F2729;
-  --text: #F1F2F3;
-  --border: rgba(255, 255, 255, 0.7);
-  --hover: #0078f1;
+  --gray-900: #121214;
+  --gray-800:#29292E;
+  --gray-750: #1F2729;
+  --gray-50: #F1F2F3;    
+  --cyan: #66FCF1;
 }
 
 * {
@@ -28,13 +27,14 @@ html {
 }
 
 body {
-  background: var(--bg-primary);
-  color: var(--text);  
+  background: var(--gray-900);
+  color: var(--gray-50);  
 }
 
 body, input, textarea, button {
   font-family: 'PT Sans', sans-serif; 
   font-weight: 400;
+  font-size: 16px;
 }
 
 h1, h2, h3, h4, h5, h6, strong {

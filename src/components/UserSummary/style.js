@@ -1,17 +1,16 @@
 import styled from 'styled-components';
 
-export const Container = styled.section `
-  grid-column: 2 / -2;
-  background: var(--bg-card);
+export const Container = styled.section `  
+  background: var(--gray-800);
   border-radius: 20px;
   margin: 0 auto;  
   display: grid;
-  grid-template-columns: repeat(2, 200px 1fr);  
+  grid-template-columns: repeat(2, 150px 230px);  
   padding:2.4rem; 
 
      img {
       border-radius: 100%;
-      border: 2px solid var(--border);
+      border: 2px solid var(--cyan);
       margin: 0 auto;
       width: 100%;   
     }     
@@ -21,12 +20,13 @@ export const ContentSummary = styled.div `
   grid-column: 2 / -1;
   display: flex;
   flex-direction: column;
-  margin-left: 1rem; 
+  margin-left: 1.85rem; 
   
     p {
       font-size: 1.1rem;
       line-height: 2rem;
-      padding: 1rem 0; 
+      padding: 1rem 0;
+      white-space: pre-line;       
     }   
 `
 export const Title = styled.div `
@@ -47,7 +47,7 @@ export const Title = styled.div `
 
     span {
       font-size: 1rem;
-      color: var(--blue-el)      
+      color: var(--cyan); 
     }
 
 `

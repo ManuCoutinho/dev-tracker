@@ -1,6 +1,6 @@
-import {ContainerWrapper} from '../src/components/ContainerWrapper';
+import {ContainerWrapper} from './components/Searcher';
 import ErrorBoundary from './ErrorBoundary';
-import {ErrorBoundary as ErrorContainer} from '../src/components/ContainerWrapper/ErrorBoundary';
+import {ErrorBoundary as ErrorContainer} from './components/Searcher/ErrorBoundary';
 import { GlobalStyle } from './styles/global';
 
 export function App() {
