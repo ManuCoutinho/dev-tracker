@@ -18,7 +18,9 @@
 ## 💻 Sobre o projeto
 
 
-(... em desenvolvimento)
+__Uma aplicação para localizar seu dev favorito.__ Com o _DevTracker_ basta digitar o nome do usuário GitHub que, deseja localizar, no campo de busca e você terá as informações mais relevantes em segundos.
+###
+A aplicação foi desenvolvida com base nas principais funcionalidades da Biblioteca __React__, como: hook _useContext_, validação de formulário, resposta visual ao usuário, renderização condicional, consumo de API de terceiros e light/dark mode.
 
 <br/>
 
@@ -28,7 +30,7 @@ Como se trata de um aplicação simples, optei por utilizar o template padrão d
 
 ### ⌨️ Comandos:
 
-* `start`: roda sua aplicação na porta `localhost:3000`
+* `dev`: roda a aplicação na porta `localhost:3000`
 * `build`: cria a versão de _build_ para produção
 * `serve`: inicia um simples servidor com a versão compilada do código
 
