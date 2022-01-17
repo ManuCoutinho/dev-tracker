@@ -1,29 +1,28 @@
 import styled from "styled-components";
 
 export const Container = styled.main`
-  padding-top: 7.5%;
   display: flex;  
   flex-direction: column;
   justify-content: center;  
-  width: 60%;
   margin: 0 auto;  
+  padding-top: 7.5%;
+  width: 60%;
 `
 
 export const ContainerSearcher = styled.section`
+  align-items: center;
   background: var(--gray-800);    
   border-radius: 20px;
-  padding: 1rem;
   display: flex;  
-  align-items: center;
   margin-bottom: 2rem;
-  //width: 52.25rem;
+  padding: 1rem;
 `
 
 export const Form = styled.form`
-  font-size: 1.3rem;  
-  width: 100%;
-  display: flex;   
   align-items: center;  
+  font-size: 1.3rem;  
+  display: flex;   
+  width: 100%;
 `
 
 export const Input = styled.input`
@@ -33,27 +32,27 @@ export const Input = styled.input`
   font-size: 1em;
   padding: 1rem;
   outline: 0;
-  width: 100%;
   transition: all 0.2s;
+  width: 100%;
     &:focus {
       border: 1px inset var(--cyan);
       border-radius: 15px;
       transition: all 0.2s;
     }
     &::placeholder {
-      padding: 0.5rem;
       font-size: 0.8em;
+      padding: 0.5rem;
     }
 `
 
 export const Button = styled.button`
+  align-items: center;
   background: var(--gray-750);
   border: 1px solid transparent;
   border-radius: 15px;
   color: var(--gray-50);
   cursor: pointer;
   display: flex;
-  align-items: center;
   font-size: 1.2rem;
   height: 2rem;
   margin-left: 2rem;
@@ -62,8 +61,8 @@ export const Button = styled.button`
   transition: filter 0.2s;
 
     &:hover {
-      filter: brightness(0.7);
       border: 1px inset var(--cyan);
+      filter: brightness(0.7);
       transition: all 0.2s;
     }
     &:active {

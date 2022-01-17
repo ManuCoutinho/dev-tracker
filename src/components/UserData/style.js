@@ -1,15 +1,14 @@
 import styled from 'styled-components';
 
 export const CardWrapper = styled.section `
-  background:var(--gray-900);
-  grid-column: 2 / -1;
-  display: flex;
-  justify-content: space-evenly;
   align-items: center;
-  padding: 1rem;
+  background:var(--gray-900);
   border-radius: 20px;
-  font-size: 1rem;
+  display: flex;
+  font-size: 1em;
+  justify-content: space-evenly;
   line-height: 2rem;
+  padding: 1rem;
 
       div {
         display: flex;
@@ -24,9 +23,8 @@ export const CardWrapper = styled.section `
 `
 
 export const CardMedia = styled.section `
- grid-column: 2 / -1;
  display: flex;
- font-size: 1rem;    
+ font-size: 1em;    
  align-items: center;
  justify-content: space-around;
  padding: 1rem 0;

@@ -44,13 +44,6 @@ h1, h2, h3, h4, h5, h6, strong {
 a {
   text-decoration: none;
   color: inherit;
-  cursor: pointer;
-  transition: filter 0.2s;   
-}
-
-a:hover {
-  filter: brightness(0.8);
-  color: var(--hover);
-  transition: 0.2s;  
+  cursor: pointer;  
 }
 `

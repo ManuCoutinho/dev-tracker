@@ -2,46 +2,44 @@ import { useContext } from "react";
 import { UserData } from "../UserData";
 import { UserContext } from "../../UserContext";
 
-import { Container, ContentSummary, Title } from "./style";
+import { Container, ContainerAvatar, ContentSummary, Title } from "./style";
 
 export function UserSummary() {
-  const data = useContext(UserContext);  
+  const data = useContext(UserContext);
 
   return (
-      <Container>
-        <div>
-          {data.map(userData => 
-            <img
-              key={(Math.random()*100)}
-              src={userData.avatar_url}
-              alt={`avatar do ${userData.name}`}
-              width="150"
-            ></img>
-        )}
-        </div>
-        <ContentSummary>
-          <Title>
-            {data.map(userData => 
-              <div>
-                <h2 key={(Math.random()*100)}>{userData.name}</h2>
-                <span key={(Math.random()*100)}>{userData.login}</span>
-              </div>
-           )}
+    <Container>
+      <ContainerAvatar>
+        {data.map((userData) => (
+          <img
+            key={Math.random() * 100}
+            src={userData.avatar_url}
+            alt={`avatar do ${userData.name}`}
+            width="150"
+          ></img>
+        ))}
+      </ContainerAvatar>
+      <ContentSummary>
+        <Title>
+          {data.map((userData) => (
             <div>
-              {data.map(userData => 
-            <p key={(Math.random()*100)}>
-              {userData.created_at}
-              </p>
-            )}
+              <h2 key={Math.random() * 100}>{userData.name}</h2>
+              <span key={Math.random() * 100}>{userData.login}</span>
             </div>
-          </Title>
+          ))}
           <div>
-            {data.map(userData => 
-              <p key={(Math.random()*100)}>{userData.bio}</p>
-            )}
+            {data.map((userData) => (
+              <p key={Math.random() * 100}>{userData.created_at}</p>
+            ))}
           </div>
-        </ContentSummary>
+        </Title>
+        <div>
+          {data.map((userData) => (
+            <p key={Math.random() * 100}>{userData.bio}</p>
+          ))}
+        </div>
         <UserData />
-      </Container>
+      </ContentSummary>
+    </Container>
   );
 }
