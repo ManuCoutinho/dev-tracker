@@ -9,6 +9,10 @@ export const HeaderContainer = styled.header `
     align-items: center;    
     width: 60%;
     padding-top: 7.5%;
+
+    @media (max-width: 61.25em) {
+      width: 90%;
+    }
 `;
 
 export const Container = styled.div`

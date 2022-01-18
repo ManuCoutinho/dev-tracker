@@ -39,4 +39,10 @@ export const CardMedia = styled.section `
           transition: all 0.2s;
         }
     }
+
+  @media(max-width: 42.5em) {
+    flex-direction: column;
+    align-self: center;
+    margin-top: 1rem;
+  } 
 `

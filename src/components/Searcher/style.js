@@ -7,6 +7,10 @@ export const Container = styled.main`
   justify-content: center;  
   margin: 0 auto;  
   width: 60%;
+
+  @media (max-width: 61.25em) {
+      width: 90%;
+  }
 `
 
 export const ContainerSearcher = styled.section`

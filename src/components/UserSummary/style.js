@@ -14,19 +14,36 @@ export const Container = styled.section `
   margin: 0 auto;  
   padding: 2.4rem;
   width: 100%; 
+
+  @media(max-width: 42.5em) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
 `
 export const ContainerAvatar = styled.div`
   margin-left: 2rem;
   width:100%;
+
   img {
-   border-radius: 100%;
-   border: 2px solid ${({theme}) => theme.element};
-   margin: 0 auto;
-   width: 100%;   
+    border-radius: 100%;
+    border: 2px solid ${({theme}) => theme.element};
+    margin: 0 auto;
+    width: 100%;   
   }   
+
+  @media(max-width: 42.5em) {
+    margin: 0 auto 1rem auto;
+    width:60%;
+  } 
 `;
 
-export const ContentSummary = styled.div `  
+export const ContentSummary = styled.div ` 
+  @media(max-width: 42.5em) {
+    margin: 0 auto;
+  } 
+
   display: flex;
   flex-direction: column;
   margin-left: 1.85rem;
