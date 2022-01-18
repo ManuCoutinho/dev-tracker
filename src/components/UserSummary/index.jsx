@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { UserData } from "../UserData";
-import { UserContext } from "../../UserContext";
+import { UserContext } from "../../utils/UserContext";
 
 import { Container, ContainerAvatar, ContentSummary, Title } from "./style";
 

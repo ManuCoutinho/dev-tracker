@@ -1,7 +1,12 @@
 import styled from 'styled-components';
 
 export const Container = styled.section `  
-  background: var(--gray-800);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  -moz-backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
   border-radius: 20px;
   column-gap: 2rem;  
   display: grid;
@@ -9,14 +14,13 @@ export const Container = styled.section `
   margin: 0 auto;  
   padding: 2.4rem;
   width: 100%; 
-
-  `
+`
 export const ContainerAvatar = styled.div`
   margin-left: 2rem;
   width:100%;
   img {
    border-radius: 100%;
-   border: 2px solid var(--cyan);
+   border: 2px solid ${({theme}) => theme.element};
    margin: 0 auto;
    width: 100%;   
   }   
@@ -53,7 +57,7 @@ export const Title = styled.div `
 
     span {
       font-size: 1rem;
-      color: var(--cyan); 
+      color: ${({theme}) => theme.info}; 
     }
 
 `

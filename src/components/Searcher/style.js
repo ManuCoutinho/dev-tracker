@@ -1,17 +1,22 @@
 import styled from "styled-components";
+import {shade} from "polished";
 
 export const Container = styled.main`
   display: flex;  
   flex-direction: column;
   justify-content: center;  
   margin: 0 auto;  
-  padding-top: 7.5%;
   width: 60%;
 `
 
 export const ContainerSearcher = styled.section`
   align-items: center;
-  background: var(--gray-800);    
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  -moz-backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
   border-radius: 20px;
   display: flex;  
   margin-bottom: 2rem;
@@ -26,8 +31,8 @@ export const Form = styled.form`
 `
 
 export const Input = styled.input`
-  background: var(--gray-800);
-  color: var(--gray-50);
+  background: inherit;
+  color: ${({theme}) => theme.text};
   border: transparent;
   font-size: 1em;
   padding: 1rem;
@@ -35,7 +40,7 @@ export const Input = styled.input`
   transition: all 0.2s;
   width: 100%;
     &:focus {
-      border: 1px inset var(--cyan);
+      border: 1px inset ${({theme}) => theme.element};
       border-radius: 15px;
       transition: all 0.2s;
     }
@@ -47,10 +52,10 @@ export const Input = styled.input`
 
 export const Button = styled.button`
   align-items: center;
-  background: var(--gray-750);
+  background: ${({theme}) => theme.secondary};
   border: 1px solid transparent;
   border-radius: 15px;
-  color: var(--gray-50);
+  color: ${({theme}) => theme.text};
   cursor: pointer;
   display: flex;
   font-size: 1.2rem;
@@ -58,14 +63,15 @@ export const Button = styled.button`
   margin-left: 2rem;
   padding: 1.5rem 3rem;
   outline: 0;
-  transition: filter 0.2s;
+  transition: color 0.2s;
 
     &:hover {
-      border: 1px inset var(--cyan);
-      filter: brightness(0.7);
-      transition: all 0.2s;
+      border: 1px inset${({theme}) => theme.element};
+      background: ${({theme}) => shade(0.1, theme.secondary)};
+      transition: color 0.2s;
     }
     &:active {
-      border: 1px inset var(--cyan);
+      border: 1px inset${({theme}) => theme.card};
+      background: ${({theme}) => shade(0.1, theme.secondary)};
     }
 `

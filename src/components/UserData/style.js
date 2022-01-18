@@ -1,9 +1,11 @@
 import styled from 'styled-components';
+import { shade } from 'polished';
 
 export const CardWrapper = styled.section `
   align-items: center;
-  background:var(--gray-900);
+  background:${({theme}) => theme.primary};  
   border-radius: 20px;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.125);
   display: flex;
   font-size: 1em;
   justify-content: space-evenly;
@@ -33,7 +35,7 @@ export const CardMedia = styled.section `
     a {
       margin-left: 0.5rem;
         &:hover {
-          color: var(--cyan);
+          color: ${({theme}) => shade(0.2, theme.info)};
           transition: all 0.2s;
         }
     }

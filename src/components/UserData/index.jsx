@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { UserContext } from "../../UserContext";
+import { UserContext } from "../../utils/UserContext";
 import { GoLocation, GoLink } from "react-icons/go";
 import { CardMedia, CardWrapper } from "./style";
 

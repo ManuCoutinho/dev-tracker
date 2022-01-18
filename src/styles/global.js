@@ -2,14 +2,6 @@ import { createGlobalStyle } from "styled-components";
 import 'react-toastify/dist/ReactToastify.css';
 
 export const GlobalStyle = createGlobalStyle `
-  :root {  
-  --gray-900: #121214;
-  --gray-800:#29292E;
-  --gray-750: #1F2729;
-  --gray-50: #F1F2F3;    
-  --cyan: #66FCF1;
-}
-
 * {
    margin: 0;
    padding: 0;
@@ -27,8 +19,9 @@ html {
 }
 
 body {
-  background: var(--gray-900);
-  color: var(--gray-50);  
+  background: ${({theme}) => theme.bg};
+  color: ${({theme}) => theme.text};
+  transition: ${({theme}) => theme.transition};
 }
 
 body, input, textarea, button {

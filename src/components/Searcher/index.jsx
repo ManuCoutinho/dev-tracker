@@ -1,9 +1,8 @@
 import { useState } from "react";
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer, toast, Flip } from "react-toastify";
 
-import { Title } from "../Title";
 import { UserSummary } from "../UserSummary";
-import { UserContext } from "../../UserContext";
+import { UserContext } from "../../utils/UserContext";
 
 import { Container, ContainerSearcher, Form, Input, Button } from "./style";
 
@@ -13,26 +12,10 @@ export function ContainerWrapper() {
   const [state, setState] = useState(0);
 
   const userNotFound = () =>
-    toast.error("User not found!", {
-      position: "top-center",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-    });
+    toast.error("User not found!");
 
   const userRequired = () =>
-    toast.warn("Type the GitHub username", {
-      position: "top-center",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,      
-    });
+    toast.warn("Type the GitHub username");
 
   async function getUser(e) {
     e.preventDefault();
@@ -54,8 +37,7 @@ export function ContainerWrapper() {
 
   return (
     <UserContext.Provider value={[data]}>
-      <Container>
-        <Title />
+      <Container>       
         <ContainerSearcher>
           <Form onSubmit={getUser}>
             <Input
@@ -64,15 +46,17 @@ export function ContainerWrapper() {
               placeholder="Type the GitHub username"
               onChange={(e) => setUser(e.target.value)}
             />
-
             <ToastContainer
               style={{ fontSize: "14px" }}
-              position="top-center"
+              position="bottom-center"
               autoClose={5000}
               hideProgressBar={false}
               newestOnTop={false}
+              pauseOnFocusLoss={false}
+              transition={Flip}
               closeOnClick
               rtl={false}
+              role="alert"
               draggable
               pauseOnHover
             />

@@ -20,7 +20,7 @@
 
 __Uma aplicação para localizar seu dev favorito.__ Com o _DevTracker_ basta digitar o nome do usuário GitHub que, deseja localizar, no campo de busca e você terá as informações mais relevantes em segundos.
 ###
-A aplicação foi desenvolvida com base nas principais funcionalidades da Biblioteca __React__, como: hook _useContext_, validação de formulário, resposta visual ao usuário, renderização condicional, consumo de API de terceiros e light/dark mode.
+A aplicação foi desenvolvida com base nas principais funcionalidades da Biblioteca __React__, como: hook _useContext_, validação de formulário, resposta visual ao usuário, renderização condicional, consumo de API de terceiros e light/dark mode utilizando os recursos da API do _Styled-Components_.
 
 <br/>
 
@@ -43,7 +43,8 @@ Como se trata de um aplicação simples, optei por utilizar o template padrão d
 * Libs:
    * [React Icons](https://react-icons.github.io/react-icons/)
    * [Toastify](https://fkhadra.github.io/react-toastify/introduction)
-* Fonte: PT Sans by [_Google Fonts_](https://fonts.google.com/)
+   * [React Switch ](https://www.npmjs.com/package/react-switch)
+* Fonte: PT Sans e Unica One by [_Google Fonts_](https://fonts.google.com/)
 * Interface adaptada para dispositivos mobile 📱
 
 
