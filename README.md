@@ -39,7 +39,9 @@ Como se trata de um aplicação simples, optei por utilizar o template padrão d
 ## 🔨 Tecnologias:
 
 * Aplicação desenvolvida no template [_Create React App_](https://create-react-app.dev/)
-* Estilização com [_Styled Components_](https://styled-components.com/)
+* Estilização com:
+  * [_Styled Components_](https://styled-components.com/)
+  *[Polished Component_](https://polished.js.org/)
 * Libs:
    * [React Icons](https://react-icons.github.io/react-icons/)
    * [Toastify](https://fkhadra.github.io/react-toastify/introduction)

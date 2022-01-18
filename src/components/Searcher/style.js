@@ -78,4 +78,8 @@ export const Button = styled.button`
       border: 1px inset${({theme}) => theme.card};
       background: ${({theme}) => shade(0.1, theme.secondary)};
     }
+    @media(max-width: 42.5em) {
+    font-size: 1rem;
+    padding: 1rem 1.75rem;   
+  } 
 `

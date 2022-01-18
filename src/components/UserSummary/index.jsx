@@ -6,7 +6,6 @@ import { Container, ContainerAvatar, ContentSummary, Title } from "./style";
 
 export function UserSummary() {
   const data = useContext(UserContext);
-
   return (
     <Container>
       <ContainerAvatar>
@@ -29,7 +28,10 @@ export function UserSummary() {
           ))}
           <div>
             {data.map((userData) => (
-              <p key={Math.random() * 100}>{userData.created_at}</p>
+              <p key={Math.random() * 100}>
+                {new Intl.DateTimeFormat('en-US', { day: 'numeric', month: 'short', year: 'numeric'} )
+              .format(new Date(userData.created_at))}
+              </p>
             ))}
           </div>
         </Title>
