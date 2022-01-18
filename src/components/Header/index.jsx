@@ -2,9 +2,8 @@ import { useContext } from "react";
 import Switch from "react-switch";
 import { ThemeContext } from "styled-components";
 import { WiDaySunny } from "react-icons/wi";
-import { FiMoon } from "react-icons/fi";
+import { FiMoon, FiGithub} from "react-icons/fi";
 
-import logoImg from "../../assets/logo.svg";
 import { Container, HeaderContainer } from "./style";
 
 export function Header({ toggleTheme }) {
@@ -14,7 +13,7 @@ export function Header({ toggleTheme }) {
     <HeaderContainer>
       <Container>
         <h1>DEV.tracker </h1>
-        <img src={logoImg} alt="Logo" />
+        <FiGithub size={44} role="logo" />
       </Container>
       <Switch
         onChange={toggleTheme}

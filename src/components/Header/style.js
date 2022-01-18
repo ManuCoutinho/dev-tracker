@@ -21,6 +21,6 @@ export const Container = styled.div`
     font-size: 3rem;
     line-height: 4rem;
     margin-left: 1rem;
-    margin-right: 1.5rem;
+    margin-right: 1rem;
   }
 `;
