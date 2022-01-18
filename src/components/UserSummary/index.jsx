@@ -25,15 +25,7 @@ export function UserSummary() {
               <h2 key={Math.random() * 100}>{userData.name}</h2>
               <span key={Math.random() * 100}>{userData.login}</span>
             </div>
-          ))}
-          <div>
-            {data.map((userData) => (
-              <p key={Math.random() * 100}>
-                {new Intl.DateTimeFormat('en-US', { day: 'numeric', month: 'short', year: 'numeric'} )
-              .format(new Date(userData.created_at))}
-              </p>
-            ))}
-          </div>
+          ))}          
         </Title>
         <div>
           {data.map((userData) => (

@@ -48,7 +48,7 @@ export function ContainerWrapper() {
             />
             <ToastContainer
               style={{ fontSize: "14px" }}
-              position="bottom-center"
+              position="bottom-right"
               autoClose={5000}
               hideProgressBar={false}
               newestOnTop={false}
